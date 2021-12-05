@@ -23,4 +23,4 @@ EXPOSE 18080
 
 COPY --from=build /usr/bin/monerod /usr/bin/monerod
 
-ENTRYPOINT monerod --p2p-bind-ip=0.0.0.0 --p2p-bind-port=18080 --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18081 --non-interactive --confirm-external-bind $EXTRA_FLAGS
+ENTRYPOINT monerod --p2p-bind-ip=0.0.0.0 --p2p-bind-port=18080 --rpc-bind-ip=0.0.0.0 --rpc-bind-port=18081 --non-interactive --log-level=1 --confirm-external-bind $EXTRA_FLAGS
